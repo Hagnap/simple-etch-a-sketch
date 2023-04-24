@@ -8,12 +8,11 @@ function createSquareDivs() {
         squareDivRow.classList.add('square-div-row');
 
         
-
         for(let j = 0; j < 16; j++) { 
             // Create div
             let square = document.createElement('div');
             square.classList.add('square-div');
-            square.textContent = (i + " "+ j + '|');
+            square.textContent = ('|' + i + " "+ j + '|');
 
             // Add div
             squareDivRow.appendChild(square);

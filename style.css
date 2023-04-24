@@ -1,4 +1,9 @@
-
 .square-div-row {
     display: flex;
+    justify-content: space-evenly;
+}
+
+.square-div {
+    margin: 4px;
+    padding: 4px;
 }
