@@ -19,15 +19,15 @@ function createSquareDivs(squaresPerSide) {
                 event.target.style.background = "black";
             });
 
-            square.addEventListener("mouseout", (event) => {
+            /* square.addEventListener("mouseout", (event) => {
 
                 // reset the color after a short delay
                 setTimeout(() => {
                     event.target.style.background = "white";
-                    }, 1000);
+                    }, 500);
 
                 //event.target.style.background = "white";
-            });
+            }); */
 
             // Add div
             squareDivRow.appendChild(square);
