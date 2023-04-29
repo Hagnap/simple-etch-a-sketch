@@ -24,7 +24,7 @@ function createSquareDivs(squaresPerSide) {
                 // reset the color after a short delay
                 setTimeout(() => {
                     event.target.style.background = "white";
-                    }, 500);
+                    }, 1000);
 
                 //event.target.style.background = "white";
             });
@@ -41,6 +41,8 @@ function createSquareDivs(squaresPerSide) {
 function setSquareGridSize() {
     let squaresPerSide = prompt("Enter Number of Squares per Side\nMax of 100 and Must be Greater than 0");
 
+    let squareDivSection = document.querySelector(".square-div-section");
+    squareDivSection.innerHTML = "";
     // Validate Input (Greater than 100, 100 squares per side, Less than 0, 16 squares per side, Otherwise x squares per side)
     if(squaresPerSide > 100) { 
         createSquareDivs(100); 
