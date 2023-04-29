@@ -13,8 +13,6 @@ function createSquareDivs() {
             let square = document.createElement('div');
             square.classList.add('square-div');
             square.id = "square-div";
-            square.textContent = (i + " "+ j);
-
 
 
             square.addEventListener("mouseover", (event) => {
@@ -26,7 +24,7 @@ function createSquareDivs() {
                 // reset the color after a short delay
                 setTimeout(() => {
                     event.target.style.background = "white";
-                    }, 500);
+                    }, 250);
 
                 //event.target.style.background = "white";
             });
