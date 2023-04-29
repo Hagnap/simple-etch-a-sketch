@@ -12,7 +12,7 @@ function createSquareDivs() {
             // Create div
             let square = document.createElement('div');
             square.classList.add('square-div');
-            square.textContent = ('|' + i + " "+ j + '|');
+            square.textContent = (i + " "+ j);
 
             // Add div
             squareDivRow.appendChild(square);
