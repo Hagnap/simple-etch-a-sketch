@@ -12,18 +12,28 @@ function createSquareDivs() {
             // Create div
             let square = document.createElement('div');
             square.classList.add('square-div');
+            square.id = "square-div";
             square.textContent = (i + " "+ j);
 
             // Add div
             squareDivRow.appendChild(square);
+
+            square.addEventListener("mouseover", (event) => {
+                event.target.style.background = "black";
+            });
+
+            square.addEventListener("mouseout", (event) => {
+                event.target.style.background = "white";
+            });
         }
 
         squareDivSection.appendChild(squareDivRow);
         squareDivSection.appendChild(document.createElement("br"));
-        console.log(squareDivRow);
-
     }
 }
 
+function updateMouseEnter() {
+    
+}
 
 createSquareDivs();
