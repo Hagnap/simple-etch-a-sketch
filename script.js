@@ -14,7 +14,7 @@ function createSquareDivs() {
             square.classList.add('square-div');
             square.id = "square-div";
 
-
+            // Reference: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event
             square.addEventListener("mouseover", (event) => {
                 event.target.style.background = "black";
             });
@@ -24,7 +24,7 @@ function createSquareDivs() {
                 // reset the color after a short delay
                 setTimeout(() => {
                     event.target.style.background = "white";
-                    }, 250);
+                    }, 500);
 
                 //event.target.style.background = "white";
             });
