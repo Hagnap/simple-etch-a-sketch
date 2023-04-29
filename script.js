@@ -15,25 +15,29 @@ function createSquareDivs() {
             square.id = "square-div";
             square.textContent = (i + " "+ j);
 
-            // Add div
-            squareDivRow.appendChild(square);
+
 
             square.addEventListener("mouseover", (event) => {
                 event.target.style.background = "black";
             });
 
             square.addEventListener("mouseout", (event) => {
-                event.target.style.background = "white";
+
+                // reset the color after a short delay
+                setTimeout(() => {
+                    event.target.style.background = "white";
+                    }, 500);
+
+                //event.target.style.background = "white";
             });
+
+            // Add div
+            squareDivRow.appendChild(square);
         }
 
         squareDivSection.appendChild(squareDivRow);
         squareDivSection.appendChild(document.createElement("br"));
     }
-}
-
-function updateMouseEnter() {
-    
 }
 
 createSquareDivs();
