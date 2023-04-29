@@ -1,14 +1,14 @@
-function createSquareDivs() {
+function createSquareDivs(squaresPerSide) {
     // Get Square Div Section
     let squareDivSection = document.querySelector(".square-div-section");
 
     // Loop 16 x 16 times to create the square divs
-    for(let i = 0; i < 16; i++) {
+    for(let i = 0; i < squaresPerSide; i++) {
         let squareDivRow = document.createElement('div');
         squareDivRow.classList.add('square-div-row');
 
         
-        for(let j = 0; j < 16; j++) { 
+        for(let j = 0; j < squaresPerSide; j++) { 
             // Create div
             let square = document.createElement('div');
             square.classList.add('square-div');
@@ -38,4 +38,20 @@ function createSquareDivs() {
     }
 }
 
-createSquareDivs();
+function setSquareGridSize() {
+    let squaresPerSide = prompt("Enter Number of Squares per Side\nMax of 100 and Must be Greater than 0");
+
+    // Validate Input (Greater than 100, 100 squares per side, Less than 0, 16 squares per side, Otherwise x squares per side)
+    if(squaresPerSide > 100) { 
+        createSquareDivs(100); 
+    }
+
+    else if(squaresPerSide <= 0) { 
+        createSquareDivs(16); 
+    }
+
+    else {
+        createSquareDivs(squaresPerSide);
+    }
+    
+}
