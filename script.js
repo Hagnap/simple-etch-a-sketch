@@ -43,6 +43,8 @@ function setSquareGridSize() {
 
     let squareDivSection = document.querySelector(".square-div-section");
     squareDivSection.innerHTML = "";
+    squareDivSection.style = "outline: 0px solid black;";
+
     // Validate Input (Greater than 100, 100 squares per side, Less than 0, 16 squares per side, Otherwise x squares per side)
     if(squaresPerSide > 100) { 
         createSquareDivs(100); 
@@ -56,4 +58,5 @@ function setSquareGridSize() {
         createSquareDivs(squaresPerSide);
     }
     
+    squareDivSection.style = "outline: 5px solid black;";
 }

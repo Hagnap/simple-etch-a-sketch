@@ -22,11 +22,9 @@ button {
 }
 
 .square-div {
-    margin: 4px;
-    padding: 4px;
 
-    height: 20px;
-    width: 20px;
+    height: 32px;
+    width: 32px;
     outline: 2px solid black;
 
     
